@@ -1,0 +1,352 @@
+/* --------------------RESET----------------- */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+    outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    /*background: #ffffff;*/
+    border-collapse: collapse;
+    font-family: Verdana, Helvetica, sans-serif;
+    line-height: 150%;
+    font-size: 10pt;
+    background: url(../images/bg.jpg) right bottom no-repeat;
+}
+
+/* -----------------Wrappers--------------- */
+
+#wrapper, #pwrap, #dwrap, #lwrap, #loginwrap, #cwrap {
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background: #eee url(../images/hbg.png) repeat-x;
+    border: 1px solid #ccc;
+
+}
+
+#wrapper {
+    width: 800px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    opacity: 0.8;
+    background-image: none;
+}
+
+#submitfor {
+    margin: 10px;
+    height: 20px;
+}
+
+#submitfor.label {
+    float: left;
+}
+
+#submitfor.select {
+    float: right;
+}
+
+#submitfor img {
+    position: relative;
+    left: +320px;
+    top: 3px;
+}
+
+#pwrap, #dwrap, #lwrap, #cwrap {
+    display: none;
+    position: absolute;
+    float: right;
+    opacity: 0;
+    top: 150px;
+    right: 350px;
+    padding: 10px;
+    width: 500px;  
+}
+
+#menuwrap{
+    position: absolute;
+    top: 0;
+    left: 500px;
+    overflow: hidden;
+    width: 500px;
+}
+
+#loginwrap{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 20%;
+    width: 400px;
+    opacity: 0.9;
+}
+
+#formwrap {
+    margin: 20px;
+}
+
+#errorBox {
+    background-color: #F9F9F9;
+    border: 2px solid red;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#greeting {
+    background: #F9F9F9;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 150%;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#statusBar {  
+    position:absolute;  
+    top:0;  
+    left:0;
+    width: 100%;
+    background-color: #DAD9BA;
+    border-bottom: 1px solid #ccc;
+    height: 32px;
+    padding: 0;
+    z-index: 99;
+}
+
+/* ---------------End wrappers--------------- */
+
+#statusBar ul {
+    margin: 3px 0 auto 0;
+    list-style: none;
+    float: left;
+    padding: 2px;
+    width: 99%;
+}
+
+#statusBar ul li {
+    display: inline;
+    padding: 0 6px 0 6px;
+}
+
+#statusBar ul li#response {
+    padding: 4px 0 4px 25px;
+    margin-left: 100px;
+    /*background: url(../images/bullet_yellow.png) no-repeat 0px 4px;*/
+}
+
+#statusBar ul li#liexit {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+#statusBar button {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
+
+#statusBar img {
+    position: relative;
+    top: 3px;
+    left: 0;
+    margin-right: 10px;
+}
+
+#statusBar ul li a {
+    text-decoration: none !important;
+    color: #113361 !important;
+}
+
+.wait {
+    color: #74684E;
+}
+
+.error {
+    color: #A15444;
+}
+
+.success {
+    color: #54A144;
+}
+
+.load {
+    color: #464775;
+}
+
+.ui-helper-reset {
+    font-size: 11px !important;
+}
+
+
+/* --------------Forms------------- */
+
+#loginwrap input {
+    width: 100px;
+}
+
+#loginwrap form{
+    padding: 20px;
+}
+
+#loginwrap form div {
+    margin: 0;
+}
+
+label {
+    float: left;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+form div {
+    margin: 10px;
+    padding: 8px;
+    overflow: hidden;
+}
+
+form div.hidden {
+    background-color: #EEEEEE !important;
+}
+
+form div label {
+    vertical-align: text-bottom;
+}
+
+input, textarea, select {
+    float:right;
+    font-family: "Trebuchet MS", Tahoma, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+}
+
+input, select {
+    width: 300px;
+}
+
+.wauto {
+    width: auto !important;
+}
+
+.smallform input,
+.smallform textarea,
+.smallform select {
+    width: 250px;
+}
+
+/* ---------- Float clear class ---------*/
+.clear {
+    float: none; 
+}
+
+div.clear {
+    margin: 0;
+    padding: 0;
+    height: 1px !important;
+    width: 400px !important;
+}
+
+#showadd, #showcont {
+    font-size: 12px;
+    width: 100%;
+}
+
+.bsubmit {
+    font-size: 10pt;
+    text-align: center;
+    width: auto !important;
+}
+
+/* ------------- Buttons -------------*/
+.add {
+    vertical-align: middle;
+}
+
+.close {
+    float: right;
+    margin-left: 90%;
+    width: 20px;
+    height: 20px;
+}
+
+/* ------------- Heads --------------*/
+h2 {
+    font-size: 14pt;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    padding-bottom: 15px;
+    color: #11506F;
+    line-height: 200%;
+    border-bottom: 1px dotted #ccc;
+    font-family: Calibri;
+}
+h3 {
+    font-size: 10pt;
+}
+
+img {
+    border: none;
+}
+.menu {
+
+}
+#errorBox h3 {
+    margin: 10px;
+}
